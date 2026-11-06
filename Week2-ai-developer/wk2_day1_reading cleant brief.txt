@@ -1,0 +1,72 @@
+Brief 1: "I need a bot"
+"Hello, I need someone to build me a bot that can reply to customer messages automatically. 
+We sell agricultural inputs in Kenya and get a lot of WhatsApp messages asking about prices and stock. 
+Budget is flexible. 
+I need it ASAP."
+
+
+Working through Brief 1
+Problem: Too many manual WhatsApp replies taking up staff time.
+Deliverable: Some kind of automated reply system. ("Bot" is vague.)
+Deadline: "ASAP" is not a deadline. This needs a specific date.
+
+What is unclear: 
+What platform is "WhatsApp"? 
+The WhatsApp Business API? A third-party tool? 
+What data does the bot pull prices from? A spreadsheet? A database? A manual list? 
+Who maintains the price list? 
+How many products are there? 
+What happens when a question falls outside the bot's knowledge?
+
+
+
+
+Brief 2: "Data dashboard"
+"We want a dashboard showing our sales data. 
+We currently use Excel and want something more visual. 
+Our team is not technical. 
+Budget is KES 25,000. 
+Timeline: 2 weeks."
+
+
+Working through Brief 2
+Problem: Their Excel data is not visual or easy to share.
+Deliverable: A dashboard. (Web-based? Printed report? Updated manually or automatically?)
+Deadline: 2 weeks. Specific enough.
+
+What is unclear: 
+What is in the Excel file? 
+How many rows? How often does it update? 
+Do they want to update it themselves? 
+What specific charts or metrics do they care about? 
+Who will view the dashboard? 
+On what device?
+
+
+
+
+Brief 3: "Build me an app like Uber but for deliveries"
+"I want to create a delivery app for Nairobi. 
+It should work like Uber but for packages. 
+Riders can sign up, businesses post deliveries, riders accept them. 
+We want to launch in 3 months."
+
+
+Working through Brief 3
+Problem: No efficient local delivery platform with a two-sided marketplace.
+Deliverable: A two-sided marketplace app (customer + rider apps, plus probably admin).
+Deadline: 3 months. Probably not realistic for the scope described.
+
+What is unclear: 
+This is a 12-24 month project, not 3 months. 
+What is the MVP? Do they understand the scope? 
+Do they have funding? 
+Are they looking for a no-code solution or a custom build? 
+Have they done any market research? 
+What payment integration do they want? 
+This brief needs a serious scoping conversation before any proposal is written.
+
+
+
+
+

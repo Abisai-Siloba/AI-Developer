@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Info</title>
+    <style>
+      :root {
+        --bg: #f3f7fb;
+        --card: #ffffff;
+        --border: #d8e6f3;
+        --primary: #0d6efd;
+        --primary-dark: #0a58ca;
+        --text: #1f2937;
+        --muted: #6b7280;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 640px;
+        margin: 40px auto;
+        padding: 0 20px;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      h1 {
+        color: #1f4e79;
+        margin-bottom: 20px;
+      }
+
+      .search-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      input {
+        flex: 1 1 220px;
+        min-width: 220px;
+        padding: 10px 12px;
+        font-size: 16px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+      }
+
+      button {
+        background: var(--primary);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.2s ease;
+      }
+
+      button:hover {
+        background: var(--primary-dark);
+      }
+
+      #result {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 4px 12px rgba(31, 41, 55, 0.04);
+      }
+
+      #result h2 {
+        margin-top: 0;
+      }
+
+      #result p {
+        margin: 8px 0;
+        color: var(--text);
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Country Info</h1>
+
+    <div class="search-row">
+      <input
+        type="password"
+        id="apiKeyInput"
+        aria-label="REST Countries API key"
+        placeholder="Password (REST Countries API key)"
+        autocomplete="off"
+      />
+      <input
+        type="text"
+        id="countryInput"
+        aria-label="Country name"
+        placeholder="Enter a country name (Kenya)"
+      />
+      <button type="button" id="searchButton">Search</button>
+    </div>
+
+    <div id="result" class="muted">Enter a country name above and click search.</div>
+
+    <script>
+      const apiKeyInput = document.getElementById('apiKeyInput');
+      const countryInput = document.getElementById('countryInput');
+      const searchButton = document.getElementById('searchButton');
+      const resultBox = document.getElementById('result');
+
+      function showMessage(message) {
+        resultBox.textContent = message;
+      }
+
+      async function loadCountry() {
+        const country = countryInput.value.trim();
+        const apiKey = apiKeyInput.value.trim();
+
+        if (!country) {
+          showMessage('Please enter a country name.');
+          countryInput.focus();
+          return;
+        }
+
+        if (!apiKey) {
+          showMessage('Enter your REST Countries API key to search.');
+          apiKeyInput.focus();
+          return;
+        }
+
+        showMessage('Loading...');
+
+        try {
+          const url = new URL('https://api.restcountries.com/countries/v5');
+          url.searchParams.set('q', country);
+          url.searchParams.set('limit', '1');
+          url.searchParams.set('response_fields', 'names,capitals,region,population,flag');
+
+          const response = await fetch(url, {
+            headers: {
+              Authorization: apiKey,
+            },
+          });
+
+          if (!response.ok) {
+            if (response.status === 401 || response.status === 403) {
+              throw new Error('The API key is missing, invalid, or does not have access.');
+            }
+            throw new Error(`Country not found (${response.status})`);
+          }
+
+          const data = await response.json();
+          const info = data[0];
+
+          if (!info) {
+            showMessage(`No country matched "${country}".`);
+            return;
+          }
+
+          const name = info.names?.common || 'Unknown';
+          const capital = info.capitals?.find((item) => item.primary)?.name
+            || info.capitals?.[0]?.name
+            || 'N/A';
+          const population = info.population?.toLocaleString() || 'N/A';
+          const region = info.region || 'N/A';
+
+          const heading = document.createElement('h2');
+          heading.textContent = `${info.flag?.emoji || '🌍'} ${name}`;
+          resultBox.replaceChildren(heading);
+
+          for (const [label, value] of [
+            ['Capital', capital],
+            ['Region', region],
+            ['Population', population],
+          ]) {
+            const paragraph = document.createElement('p');
+            const labelElement = document.createElement('strong');
+            labelElement.textContent = `${label}: `;
+            paragraph.append(labelElement, document.createTextNode(value));
+            resultBox.append(paragraph);
+          }
+        } catch (error) {
+          showMessage(`Error: ${error instanceof Error ? error.message : 'Unable to load country data.'}`);
+        }
+      }
+
+      searchButton.addEventListener('click', loadCountry);
+      countryInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          loadCountry();
+        }
+      });
+    </script>
+  </body>
+</html>

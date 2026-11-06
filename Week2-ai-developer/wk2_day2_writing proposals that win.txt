@@ -1,0 +1,74 @@
+A Complete Proposal Example
+
+Before you submit any proposal, read each sentence and ask: 
+could my competition have written this sentence without reading this brief? If yes, 
+cut it or rewrite it to be specific.
+
+
+
+Brief-1: "I need a bot"
+"Hello, I need someone to build me a bot that can reply to customer messages automatically. 
+We sell agricultural inputs in Kenya and get a lot of WhatsApp messages asking about prices and stock. 
+Budget is flexible. 
+I need it ASAP."
+
+
+
+Submiting proposal
+
+Opening
+You mentioned your team spends too much time answering repetitive WhatsApp messages about prices and stock. 
+I can build an automated reply system that handles those common questions instantly, 24/7, so your team focuses only on conversations that actually need a human.
+
+Understanding
+Before building anything, I would want to understand three things: 
+what platform you use for WhatsApp (WhatsApp Business app or the API), 
+where your price and stock data currently lives, and 
+whether you need the bot to take orders or just provide information.
+
+Approach
+I will set up an automated reply flow connected to your current product list. 
+Customers asking about prices or availability get an instant, accurate response. 
+Messages outside that scope get flagged for your team to handle manually.
+
+Deliverables
+A working automated reply system, a simple admin interface to update prices and stock, and a 30-minute handover call so your team knows how to use and maintain it.
+
+Price and timeline
+KES 35,000. Ready in 10 working days from when you provide access to your WhatsApp Business account and product list. 
+50% upfront, 50% on delivery.
+
+Call to action
+Happy to answer the three questions above before you decide. 
+What platform do you currently use for WhatsApp?
+
+
+
+
+
+
+Brief 2: "Data dashboard"
+"We want a dashboard showing our sales data. 
+We currently use Excel and want something more visual. 
+Our team is not technical. 
+Budget is KES 25,000. 
+Timeline: 2 weeks."
+
+
+Submiting proposal
+
+Opening
+I will help build a dashboard that will save your team's time and easy for Understanding.
+
+Understanding
+I am assuming the data lives in google spreadsheet. If it a database, the timeline extent to 3days.
+
+Approach
+I will build a dashboard that will require a single seach pup up the brief result that is intergrated with the spreadsheet.
+
+Call to action
+Happy toanser one question above befor I decide on the price and delivery time.
+Where does your data lives? database or google spreadsheet.
+if database, delivery time will be 21 working days from the time of getting access to database cost KES 37,000
+if google spreadsheet, delivery time will be 15 working days from the time of getting access to google spreadsheet cost KES 31,000 
+Down payment of 50% will be paid apon agrement and the balance 50% will be paid apon delivery and tested of the project.

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Country Info</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
+    h1 { color: #1F4E79; }
+    #result { background: #f7f9fc; border: 1px solid #d0dff0; border-radius: 8px; padding: 20px; margin-top: 20px; }
+    button { background: #2E75B6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; }
+    button:hover { background: #1F4E79; }
+  </style>
+</head>
+<body>
+
+<h1>Country Info</h1>
+<input type="text" id="countryInput" placeholder="Enter a country name (Kenya)" style="padding:8px; font-size:16px; width:250px;">
+<button onclick="loadCountry()">Search</button>
+<div id="result">Enter a country name above and click Search.</div>
+
+<script>
+async function loadCountry() {
+  const country = document.getElementById("countryInput").value.trim();
+
+  if (!country) {
+    document.getElementById("result").innerHTML = "Please enter a country name.";
+    return;
+  }
+
+  document.getElementById("result").innerHTML = "Loading...";
+
+  try {
+    const response = await fetch(`https://restcountries.com/v3.1/name/${encodeURIComponent(country)}?fields=name,capital,population,region,flags`);
+
+    if (!response.ok) {
+      throw new Error(`Country not found (${response.status})`);
+    }
+
+    const data = await response.json();
+    const info = data[0];
+
+    if (!info) {
+      throw new Error("Country not found");
+    }
+
+    const name = info.name?.common || info.name || "Unknown";
+    const capital = info.capital ? info.capital[0] : "N/A";
+    const population = info.population ? info.population.toLocaleString() : "N/A";
+    const region = info.region || "N/A";
+    const flag = info.flags?.emoji || "🏳️";
+
+    document.getElementById("result").innerHTML = `
+      <h2>${flag} ${name}</h2>
+      <p><strong>Capital:</strong> ${capital}</p>
+      <p><strong>Region:</strong> ${region}</p>
+      <p><strong>Population:</strong> ${population}</p>
+    `;
+  } catch (error) {
+    document.getElementById("result").innerHTML = `Error: ${error.message}`;
+  }
+}
+</script>
+
+</body>
+</html>

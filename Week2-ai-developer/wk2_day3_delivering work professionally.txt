@@ -1,0 +1,53 @@
+Delivering Work Professionally
+
+What You Hand Over at the End of a Project
+1. A clean code - Well structured code.
+2. A Readme - standard oparating procedure.
+3. A delivery message - What you build
+4. A written sign-off - Customer feedbck
+
+
+
+Example 1 Delivery Message
+Hello [Client],
+The automated WhatsApp reply system is ready. Here is a summary of what was delivered:
+- Replies automatically to messages asking about prices, stock, and delivery times
+- Admin page at [URL] lets you update your product list and prices without touching code
+- Messages outside the FAQ scope are flagged to your team with a daily digest
+I have set up a test number you can use to try it: [number]. Send it any of the common questions your customers ask.
+This covers everything in the original brief. Please review it over the next two business days. 
+If everything looks good, send me a message confirming and I will invoice for the remaining 50%.
+Let me know if you have questions.
+
+
+
+
+Handling Revision Requests
+
+Revision (included) 
+"The bot is not replying to messages about delivery time."
+Delivery time questions were in the agreed scope. If they are not working, that is your bug to fix at no extra charge.
+
+Revision (Excluded)
+"Can we add a feature where the bot also takes orders and updates our stock spreadsheet automatically?"
+Order-taking was never in the brief. This is a separate project.
+
+
+
+
+Example 2 Delivery Message
+Hello James Karani,
+
+The dashboard system for sales data is ready. 
+
+Here is the sammary of what was delivered:
+The data is pulled directly from the database with a simple seach of a customer name or all customers.
+- A sales summary report
+- Daily sales report
+- Monthly sales report
+- Quortely sales report
+- A half an year sales report
+- Yearly sales report
+- Date wise sales report
+
+Have the system tested for 3 days and share the feedback. I will prepare the final invoce of the remaining 50%.
