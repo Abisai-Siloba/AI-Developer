@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Travel Weather (Client)</title>
+  </head>
+  <body>
+    <h1>Travel Weather Tool (Client)</h1>
+    <input id="city" placeholder="City" />
+    <button id="go">Get</button>
+    <pre id="out"></pre>
+
+    <script>
+      const API_KEY = "OPENWEATHER_API_KEY";
+
+      document.getElementById("go").addEventListener("click", async () => {
+        const city = document.getElementById("city").value.trim();
+        if (!city) return;
+        const out = document.getElementById("out");
+        out.textContent = "Loading...";
+        try {
+          const wRes = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${API_KEY}&units=metric`);
+          if (!wRes.ok) { out.textContent = "Weather not found"; return; }
+          const w = await wRes.json();
+          const cc = w.sys.country;
+          const cRes = await fetch(`https://restcountries.com/v3.1/alpha/${cc}`);
+          const cData = await cRes.json();
+          out.textContent = JSON.stringify({ weather: w, country: cData[0] }, null, 2);
+        } catch (err) {
+          out.textContent = "Error: " + err;
+        }
+      });
+    </script>
+  </body>
+</html>

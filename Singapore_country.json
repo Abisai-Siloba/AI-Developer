@@ -1,0 +1,404 @@
+{
+  "data": {
+    "objects": [
+      {
+        "names": {
+          "alternates": [],
+          "common": "Singapore",
+          "native": {
+            "eng": {
+              "common": "Singapore",
+              "official": "Republic of Singapore"
+            },
+            "msa": {
+              "common": "Singapura",
+              "official": "Republik Singapura"
+            },
+            "tam": {
+              "common": "\u0b9a\u0bbf\u0b99\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0bc2\u0bb0\u0bcd",
+              "official": "\u0b9a\u0bbf\u0b99\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0bc2\u0bb0\u0bcd \u0b95\u0bc1\u0b9f\u0bbf\u0baf\u0bb0\u0b9a\u0bc1"
+            },
+            "zho": {
+              "common": "\u65b0\u52a0\u5761",
+              "official": "\u65b0\u52a0\u5761\u5171\u548c\u56fd"
+            }
+          },
+          "official": "Republic of Singapore",
+          "translations": {
+            "ara": {
+              "common": "\u0633\u0646\u063a\u0627\u0641\u0648\u0631\u0629",
+              "official": "\u062c\u0645\u0647\u0648\u0631\u064a\u0629 \u0633\u0646\u063a\u0627\u0641\u0648\u0631\u0629"
+            },
+            "bre": {
+              "common": "Singapour",
+              "official": "Republik Singapour"
+            },
+            "ces": {
+              "common": "Singapur",
+              "official": "Singapursk\u00e1 republika"
+            },
+            "cym": {
+              "common": "Singapore",
+              "official": "Republic of Singapore"
+            },
+            "deu": {
+              "common": "Singapur",
+              "official": "Republik Singapur"
+            },
+            "est": {
+              "common": "Singapur",
+              "official": "Singapuri Vabariik"
+            },
+            "fas": {
+              "common": "\u0633\u0646\u06af\u0627\u067e\u0648\u0631",
+              "official": "\u062c\u0645\u0647\u0648\u0631\u06cc \u0633\u0646\u06af\u0627\u067e\u0648\u0631"
+            },
+            "fin": {
+              "common": "Singapore",
+              "official": "Singaporen tasavalta"
+            },
+            "fra": {
+              "common": "Singapour",
+              "official": "R\u00e9publique de Singapour"
+            },
+            "hrv": {
+              "common": "Singapur",
+              "official": "Republika Singapur"
+            },
+            "hun": {
+              "common": "Szingap\u00far",
+              "official": "Szingap\u00fari K\u00f6zt\u00e1rsas\u00e1g"
+            },
+            "ind": {
+              "common": "Singapura",
+              "official": "Republik Singapura"
+            },
+            "ita": {
+              "common": "Singapore",
+              "official": "Repubblica di Singapore"
+            },
+            "jpn": {
+              "common": "\u30b7\u30f3\u30ac\u30dd\u30fc\u30eb",
+              "official": "\u30b7\u30f3\u30ac\u30dd\u30fc\u30eb\u5171\u548c\u56fd"
+            },
+            "kor": {
+              "common": "\uc2f1\uac00\ud3ec\ub974",
+              "official": "\uc2f1\uac00\ud3ec\ub974 \uacf5\ud654\uad6d"
+            },
+            "nld": {
+              "common": "Singapore",
+              "official": "Republiek Singapore"
+            },
+            "pol": {
+              "common": "Singapur",
+              "official": "Republika Singapuru"
+            },
+            "por": {
+              "common": "Singapura",
+              "official": "Rep\u00fablica de Singapura"
+            },
+            "rus": {
+              "common": "\u0421\u0438\u043d\u0433\u0430\u043f\u0443\u0440",
+              "official": "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0421\u0438\u043d\u0433\u0430\u043f\u0443\u0440"
+            },
+            "slk": {
+              "common": "Singapur",
+              "official": "Singapursk\u00e1 republika"
+            },
+            "spa": {
+              "common": "Singapur",
+              "official": "Rep\u00fablica de Singapur"
+            },
+            "srp": {
+              "common": "\u0421\u0438\u043d\u0433\u0430\u043f\u0443\u0440",
+              "official": "\u0420\u0435\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0421\u0438\u043d\u0433\u0430\u043f\u0443\u0440"
+            },
+            "swe": {
+              "common": "Singapore",
+              "official": "Republiken Singapore"
+            },
+            "tur": {
+              "common": "Singapur",
+              "official": "Singapur Cumhuriyeti"
+            },
+            "urd": {
+              "common": "\u0633\u0646\u06af\u0627\u067e\u0648\u0631",
+              "official": "\u062c\u0645\u06c1\u0648\u0631\u06cc\u06c1 \u0633\u0646\u06af\u0627\u067e\u0648\u0631"
+            }
+          }
+        },
+        "codes": {
+          "alpha_2": "SG",
+          "alpha_3": "SGP",
+          "ccn3": "702",
+          "cioc": "SGP",
+          "fifa": "SIN",
+          "fips": "SN",
+          "gec": "SN"
+        },
+        "capitals": [
+          {
+            "attributes": {
+              "administrative": false,
+              "constitutional": false,
+              "executive": false,
+              "judicial": false,
+              "legislative": false,
+              "primary": true
+            },
+            "coordinates": {
+              "lat": 1.28,
+              "lng": 103.85
+            },
+            "name": "Singapore"
+          }
+        ],
+        "flag": {
+          "colors": {
+            "dominant": "#ef272b",
+            "palette": [
+              {
+                "hex": "#ef272b",
+                "proportion": 0.46733668341708545
+              },
+              {
+                "hex": "#fcfbf7",
+                "proportion": 0.5079945180447692
+              },
+              {
+                "hex": "#f69398",
+                "proportion": 0.006395614435815441
+              },
+              {
+                "hex": "#ffedee",
+                "proportion": 0.016217450890817726
+              },
+              {
+                "hex": "#fefafc",
+                "proportion": 0.0006852444038373687
+              },
+              {
+                "hex": "#f78189",
+                "proportion": 0.0009136592051164915
+              },
+              {
+                "hex": "#f7fdfd",
+                "proportion": 0.00045682960255824577
+              },
+              {
+                "hex": "#e5deaa",
+                "proportion": 0
+              }
+            ],
+            "prominent": "#fcfbf7",
+            "swatches": {
+              "dark_muted": null,
+              "dark_vibrant": null,
+              "light_muted": "#fcfbf7",
+              "light_vibrant": "#f78189",
+              "muted": "#f69398",
+              "vibrant": "#ef272b"
+            }
+          },
+          "description": "The flag of Singapore is composed of two equal horizontal bands of red and white. On the hoist side of the red band is a fly-side facing white crescent which partially encloses five small five-pointed white stars arranged in the shape of a pentagon.",
+          "emoji": "\ud83c\uddf8\ud83c\uddec",
+          "html_entity": "&#127480;&#127468;",
+          "unicode": "U+1F1F8 U+1F1EC",
+          "url_png": "https://flags.restcountries.com/v5/w640/sg.png",
+          "url_svg": "https://flags.restcountries.com/v5/svg/sg.svg"
+        },
+        "region": "Asia",
+        "subregion": "South-Eastern Asia",
+        "area": {
+          "kilometers": 710,
+          "miles": 274.1
+        },
+        "assets": [],
+        "borders": [],
+        "calling_codes": [
+          "65"
+        ],
+        "cars": {
+          "driving_side": "left",
+          "signs": [
+            "SGP"
+          ]
+        },
+        "classification": {
+          "dependency": false,
+          "dependency_type": "",
+          "disputed": false,
+          "iso_status": "official",
+          "sovereign": true,
+          "un_member": true,
+          "un_observer": false
+        },
+        "continents": [
+          "Asia"
+        ],
+        "coordinates": {
+          "lat": 1.36666666,
+          "lng": 103.8
+        },
+        "currencies": [
+          {
+            "code": "SGD",
+            "name": "Singapore dollar",
+            "symbol": "$"
+          }
+        ],
+        "date": {
+          "academic_year_start": {
+            "day": 1,
+            "month": 1
+          },
+          "fiscal_year_start": {
+            "corporate": {
+              "basis": "default",
+              "day": 1,
+              "month": 4
+            },
+            "government": {
+              "day": 1,
+              "month": 4
+            },
+            "personal": {
+              "day": 1,
+              "month": 1
+            }
+          },
+          "start_of_week": "monday"
+        },
+        "demonyms": {
+          "eng": {
+            "f": "Singaporean",
+            "m": "Singaporean"
+          },
+          "fra": {
+            "f": "Singapourienne",
+            "m": "Singapourien"
+          }
+        },
+        "descriptions": {
+          "long": "Singapore is a republic that separated from Malaysia in 1965, with English, Malay, Mandarin and Tamil as official languages. The Singapore dollar is the currency, and one of the world's largest container ports, oil refining and finance lead the economy.",
+          "short": "Singapore is an island city-state at the southern tip of the Malay Peninsula in Southeast Asia."
+        },
+        "economy": {
+          "gini_coefficient": {}
+        },
+        "government_type": "Unitary parliamentary republic",
+        "landlocked": false,
+        "languages": [
+          {
+            "bcp47": "en",
+            "iso639_1": "en",
+            "iso639_2b": "eng",
+            "iso639_2t": "eng",
+            "iso639_3": "eng",
+            "name": "English",
+            "native_name": "English"
+          },
+          {
+            "bcp47": "zh",
+            "iso639_1": "zh",
+            "iso639_2b": "chi",
+            "iso639_2t": "zho",
+            "iso639_3": "zho",
+            "name": "Chinese",
+            "native_name": "\u4e2d\u6587"
+          },
+          {
+            "bcp47": "ms",
+            "iso639_1": "ms",
+            "iso639_2b": "may",
+            "iso639_2t": "msa",
+            "iso639_3": "msa",
+            "name": "Malay",
+            "native_name": "Bahasa Melayu"
+          },
+          {
+            "bcp47": "ta",
+            "iso639_1": "ta",
+            "iso639_2b": "tam",
+            "iso639_2t": "tam",
+            "iso639_3": "tam",
+            "name": "Tamil",
+            "native_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd"
+          }
+        ],
+        "leaders": [
+          {
+            "message": "data.leaders is only available on paid plans. Go to https://restcountries.com/plans to make updates to your account.",
+            "sample": "https://files-03.restcountries.com/countries.00/sample.leaders.json"
+          }
+        ],
+        "links": {
+          "google_maps": "https://goo.gl/maps/QbQt9Y9b5KFzsahV6",
+          "official": "https://www.gov.sg",
+          "open_street_maps": "https://www.openstreetmap.org/relation/536780",
+          "wikipedia": "https://en.wikipedia.org/wiki/Singapore"
+        },
+        "memberships": {
+          "african_union": false,
+          "arab_league": false,
+          "asean": true,
+          "brics": false,
+          "commonwealth": true,
+          "eu": false,
+          "eurozone": false,
+          "g20": false,
+          "g7": false,
+          "nato": false,
+          "oecd": false,
+          "opec": false,
+          "schengen": false,
+          "un": true
+        },
+        "number_format": {
+          "decimal_separator": ".",
+          "thousands_separator": ","
+        },
+        "parent": {
+          "alpha_2": "",
+          "alpha_3": ""
+        },
+        "population": 6208500,
+        "postal_code": {
+          "format": "######",
+          "regex": "^(\\d{6})$"
+        },
+        "timezones": [
+          "UTC+08:00"
+        ],
+        "tlds": [
+          ".sg",
+          ".\u65b0\u52a0\u5761",
+          ".\u0b9a\u0bbf\u0b99\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0bc2\u0bb0\u0bcd"
+        ],
+        "units": {
+          "measurement_system": "metric",
+          "temperature_scale": "Celsius"
+        },
+        "uuid": "67c93bfb-ea02-4bab-a7d1-c8da57599f9d",
+        "_match": [
+          {
+            "path": "names.common",
+            "value": "Singapore"
+          }
+        ],
+        "_meta": {
+          "lastUpdatedTimestamp": 1790538279
+        }
+      }
+    ],
+    "meta": {
+      "total": 1,
+      "count": 1,
+      "limit": 25,
+      "offset": 0,
+      "more": false,
+      "request_id": "d8647e68-6b5c-4d31-99ac-5a81c493697c",
+      "duration": 28
+    }
+  }
+}

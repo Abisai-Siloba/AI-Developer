@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-31T14:29:16.159531",
+  "messages": [
+    {
+      "role": "user",
+      "content": "how long have you been oparating?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm an AI assistant for Kanini Haraka Wholesale in Nyeri. I don't have information about how long the business has been operating.\n\nFor details about the company's history and background, please contact Kanini Haraka Wholesale directly.\n\nHow can I help you with stock, pricing, or delivery information?"
+    },
+    {
+      "role": "user",
+      "content": "any gues?"
+    },
+    {
+      "role": "assistant",
+      "content": "I don't have reliable information to guess about that! It's best to ask the team at Kanini Haraka Wholesale directly - they'll give you accurate details about their business history.\n\nIs there anything I can help you with regarding stock, pricing, or delivery instead?"
+    }
+  ]
+}

@@ -1,0 +1,373 @@
+{
+  "data": {
+    "objects": [
+      {
+        "names": {
+          "alternates": [
+            "Nijeriya",
+            "Na\u00edj\u00edr\u00ed\u00e0"
+          ],
+          "common": "Nigeria",
+          "native": {
+            "eng": {
+              "common": "Nigeria",
+              "official": "Federal Republic of Nigeria"
+            }
+          },
+          "official": "Federal Republic of Nigeria",
+          "translations": {
+            "ara": {
+              "common": "\u0646\u064a\u062c\u064a\u0631\u064a\u0627",
+              "official": "\u062c\u0645\u0647\u0648\u0631\u064a\u0629 \u0646\u064a\u062c\u064a\u0631\u064a\u0627 \u0627\u0644\u0627\u062a\u062d\u0627\u062f\u064a\u0629"
+            },
+            "bre": {
+              "common": "Nigeria",
+              "official": "Republik Kevreadel Nigeria"
+            },
+            "ces": {
+              "common": "Nig\u00e9rie",
+              "official": "Nigerijsk\u00e1 federativn\u00ed republika"
+            },
+            "cym": {
+              "common": "Nigeria",
+              "official": "Federal Republic of Nigeria"
+            },
+            "deu": {
+              "common": "Nigeria",
+              "official": "Bundesrepublik Nigeria"
+            },
+            "est": {
+              "common": "Nigeeria",
+              "official": "Nigeeria Liitvabariik"
+            },
+            "fas": {
+              "common": "\u0646\u06cc\u062c\u0631\u06cc\u0647",
+              "official": "\u062c\u0645\u0647\u0648\u0631\u06cc \u0641\u062f\u0631\u0627\u0644 \u0646\u06cc\u062c\u0631\u06cc\u0647"
+            },
+            "fin": {
+              "common": "Nigeria",
+              "official": "Nigerian liittotasavalta"
+            },
+            "fra": {
+              "common": "Nig\u00e9ria",
+              "official": "R\u00e9publique f\u00e9d\u00e9rale du Nigeria"
+            },
+            "hrv": {
+              "common": "Nigerija",
+              "official": "Savezna Republika Nigerija"
+            },
+            "hun": {
+              "common": "Nig\u00e9ria",
+              "official": "Nig\u00e9ria"
+            },
+            "ind": {
+              "common": "Nigeria",
+              "official": "Republik Federal Nigeria"
+            },
+            "ita": {
+              "common": "Nigeria",
+              "official": "Repubblica federale di Nigeria"
+            },
+            "jpn": {
+              "common": "\u30ca\u30a4\u30b8\u30a7\u30ea\u30a2",
+              "official": "\u30ca\u30a4\u30b8\u30a7\u30ea\u30a2\u9023\u90a6\u5171\u548c\u56fd"
+            },
+            "kor": {
+              "common": "\ub098\uc774\uc9c0\ub9ac\uc544",
+              "official": "\ub098\uc774\uc9c0\ub9ac\uc544 \uc5f0\ubc29 \uacf5\ud654\uad6d"
+            },
+            "nld": {
+              "common": "Nigeria",
+              "official": "Federale Republiek Nigeria"
+            },
+            "pol": {
+              "common": "Nigeria",
+              "official": "Federalna Republika Nigerii"
+            },
+            "por": {
+              "common": "Nig\u00e9ria",
+              "official": "Rep\u00fablica Federal da Nig\u00e9ria"
+            },
+            "rus": {
+              "common": "\u041d\u0438\u0433\u0435\u0440\u0438\u044f",
+              "official": "\u0424\u0435\u0434\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041d\u0438\u0433\u0435\u0440\u0438\u044f"
+            },
+            "slk": {
+              "common": "Nig\u00e9ria",
+              "official": "Nig\u00e9rijsk\u00e1 federat\u00edvna republika"
+            },
+            "spa": {
+              "common": "Nigeria",
+              "official": "Rep\u00fablica Federal de Nigeria"
+            },
+            "srp": {
+              "common": "\u041d\u0438\u0433\u0435\u0440\u0438\u0458\u0430 ",
+              "official": "\u0421\u0430\u0432\u0435\u0437\u043d\u0430 \u0420\u0435\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041d\u0438\u0433\u0435\u0440\u0438\u0458\u0430"
+            },
+            "swe": {
+              "common": "Nigeria",
+              "official": "F\u00f6rbundsrepubliken Nigeria"
+            },
+            "tur": {
+              "common": "Nijerya",
+              "official": "Nijerya Federal Cumhuriyeti"
+            },
+            "urd": {
+              "common": "\u0646\u0627\u0626\u062c\u06cc\u0631\u06cc\u0627",
+              "official": "\u0648\u0641\u0627\u0642\u06cc \u062c\u0645\u06c1\u0648\u0631\u06cc\u06c1 \u0646\u0627\u0626\u062c\u06cc\u0631\u06cc\u0627"
+            },
+            "zho": {
+              "common": "\u5c3c\u65e5\u5229\u4e9a",
+              "official": "\u5c3c\u65e5\u5229\u4e9a\u8054\u90a6\u5171\u548c\u56fd"
+            }
+          }
+        },
+        "codes": {
+          "alpha_2": "NG",
+          "alpha_3": "NGA",
+          "ccn3": "566",
+          "cioc": "NGR",
+          "fifa": "NGA",
+          "fips": "NI",
+          "gec": "NI"
+        },
+        "capitals": [
+          {
+            "attributes": {
+              "administrative": false,
+              "constitutional": false,
+              "executive": false,
+              "judicial": false,
+              "legislative": false,
+              "primary": true
+            },
+            "coordinates": {
+              "lat": 9.08,
+              "lng": 7.53
+            },
+            "name": "Abuja"
+          }
+        ],
+        "flag": {
+          "colors": {
+            "dominant": "#058751",
+            "palette": [
+              {
+                "hex": "#058751",
+                "proportion": 0.6484589563625267
+              },
+              {
+                "hex": "#ffffff",
+                "proportion": 0.3201098565761367
+              },
+              {
+                "hex": "#a8d3bf",
+                "proportion": 0.007934086054317974
+              },
+              {
+                "hex": "#097f46",
+                "proportion": 0.007934086054317974
+              },
+              {
+                "hex": "#fbfdfd",
+                "proportion": 0.007934086054317974
+              },
+              {
+                "hex": "#098852",
+                "proportion": 0.007628928898382667
+              }
+            ],
+            "prominent": "#058751",
+            "swatches": {
+              "dark_muted": null,
+              "dark_vibrant": null,
+              "light_muted": "#a8d3bf",
+              "light_vibrant": null,
+              "muted": "#098852",
+              "vibrant": "#058751"
+            }
+          },
+          "description": "The flag of Nigeria is composed of three equal vertical bands of green, white and green.",
+          "emoji": "\ud83c\uddf3\ud83c\uddec",
+          "html_entity": "&#127475;&#127468;",
+          "unicode": "U+1F1F3 U+1F1EC",
+          "url_png": "https://flags.restcountries.com/v5/w640/ng.png",
+          "url_svg": "https://flags.restcountries.com/v5/svg/ng.svg"
+        },
+        "region": "Africa",
+        "subregion": "Western Africa",
+        "area": {
+          "kilometers": 923768,
+          "miles": 356668.7
+        },
+        "assets": [],
+        "borders": [
+          "BEN",
+          "CMR",
+          "TCD",
+          "NER"
+        ],
+        "calling_codes": [
+          "234"
+        ],
+        "cars": {
+          "driving_side": "right",
+          "signs": [
+            "WAN"
+          ]
+        },
+        "classification": {
+          "dependency": false,
+          "dependency_type": "",
+          "disputed": false,
+          "iso_status": "official",
+          "sovereign": true,
+          "un_member": true,
+          "un_observer": false
+        },
+        "continents": [
+          "Africa"
+        ],
+        "coordinates": {
+          "lat": 10,
+          "lng": 8
+        },
+        "currencies": [
+          {
+            "code": "NGN",
+            "name": "Nigerian naira",
+            "symbol": "\u20a6"
+          }
+        ],
+        "date": {
+          "academic_year_start": {
+            "day": 1,
+            "month": 9
+          },
+          "fiscal_year_start": {
+            "corporate": {
+              "basis": "convention",
+              "day": 1,
+              "month": 1
+            },
+            "government": {
+              "day": 1,
+              "month": 1
+            },
+            "personal": {
+              "day": 1,
+              "month": 1
+            }
+          },
+          "start_of_week": "monday"
+        },
+        "demonyms": {
+          "eng": {
+            "f": "Nigerian",
+            "m": "Nigerian"
+          },
+          "fra": {
+            "f": "Nig\u00e9riane",
+            "m": "Nig\u00e9rian"
+          }
+        },
+        "descriptions": {
+          "long": "Nigeria is a federation of thirty-six states with Abuja as its capital, Lagos as its largest city and English as its official language. The naira is the currency, and crude oil and natural gas supply most of its export earnings.",
+          "short": "Nigeria is a West African federal republic on the Gulf of Guinea, the most populous in Africa."
+        },
+        "economy": {
+          "gini_coefficient": {
+            "2010": 35.7,
+            "2012": 35.5,
+            "2015": 35.9,
+            "2018": 35.1,
+            "2022": 33.9
+          }
+        },
+        "government_type": "Federal presidential republic",
+        "landlocked": false,
+        "languages": [
+          {
+            "bcp47": "en",
+            "iso639_1": "en",
+            "iso639_2b": "eng",
+            "iso639_2t": "eng",
+            "iso639_3": "eng",
+            "name": "English",
+            "native_name": "English"
+          }
+        ],
+        "leaders": [
+          {
+            "message": "data.leaders is only available on paid plans. Go to https://restcountries.com/plans to make updates to your account.",
+            "sample": "https://files-03.restcountries.com/countries.00/sample.leaders.json"
+          }
+        ],
+        "links": {
+          "google_maps": "https://goo.gl/maps/LTn417qWwBPFszuV9",
+          "official": "https://www.nigeria.gov.ng",
+          "open_street_maps": "https://www.openstreetmap.org/relation/192787",
+          "wikipedia": "https://en.wikipedia.org/wiki/Nigeria"
+        },
+        "memberships": {
+          "african_union": true,
+          "arab_league": false,
+          "asean": false,
+          "brics": false,
+          "commonwealth": true,
+          "eu": false,
+          "eurozone": false,
+          "g20": false,
+          "g7": false,
+          "nato": false,
+          "oecd": false,
+          "opec": true,
+          "schengen": false,
+          "un": true
+        },
+        "number_format": {
+          "decimal_separator": ".",
+          "thousands_separator": ","
+        },
+        "parent": {
+          "alpha_2": "",
+          "alpha_3": ""
+        },
+        "population": 223800000,
+        "postal_code": {
+          "format": "######",
+          "regex": "^(\\d{6})$"
+        },
+        "timezones": [
+          "UTC+01:00"
+        ],
+        "tlds": [
+          ".ng"
+        ],
+        "units": {
+          "measurement_system": "metric",
+          "temperature_scale": "Celsius"
+        },
+        "uuid": "b1bd6843-8e2b-4222-bc67-8a0601623c2e",
+        "_match": [
+          {
+            "path": "names.common",
+            "value": "Nigeria"
+          }
+        ],
+        "_meta": {
+          "lastUpdatedTimestamp": 1788557519
+        }
+      }
+    ],
+    "meta": {
+      "total": 1,
+      "count": 1,
+      "limit": 25,
+      "offset": 0,
+      "more": false,
+      "request_id": "49b0a9d0-efb2-4579-99db-26a1ed5a4057",
+      "duration": 23
+    }
+  }
+}

@@ -1,0 +1,394 @@
+{
+  "data": {
+    "objects": [
+      {
+        "names": {
+          "alternates": [
+            "Jamhuri ya Kenya"
+          ],
+          "common": "Kenya",
+          "native": {
+            "eng": {
+              "common": "Kenya",
+              "official": "Republic of Kenya"
+            },
+            "swa": {
+              "common": "Kenya",
+              "official": "Republic of Kenya"
+            }
+          },
+          "official": "Republic of Kenya",
+          "translations": {
+            "ara": {
+              "common": "\u0643\u064a\u0646\u064a\u0627",
+              "official": "\u062c\u0645\u0647\u0648\u0631\u064a\u0629 \u0643\u064a\u0646\u064a\u0627"
+            },
+            "bre": {
+              "common": "Kenya",
+              "official": "Republik Kenya"
+            },
+            "ces": {
+              "common": "Ke\u0148a",
+              "official": "Ke\u0148sk\u00e1 republika"
+            },
+            "cym": {
+              "common": "Kenya",
+              "official": "Republic of Kenya"
+            },
+            "deu": {
+              "common": "Kenia",
+              "official": "Republik Kenia"
+            },
+            "est": {
+              "common": "Keenia",
+              "official": "Keenia Vabariik"
+            },
+            "fas": {
+              "common": "\u06a9\u0646\u06cc\u0627",
+              "official": "\u062c\u0645\u0647\u0648\u0631\u06cc \u06a9\u0646\u06cc\u0627"
+            },
+            "fin": {
+              "common": "Kenia",
+              "official": "Kenian tasavalta"
+            },
+            "fra": {
+              "common": "Kenya",
+              "official": "R\u00e9publique du Kenya"
+            },
+            "hrv": {
+              "common": "Kenija",
+              "official": "Republika Kenija"
+            },
+            "hun": {
+              "common": "Kenya",
+              "official": "Kenyai K\u00f6zt\u00e1rsas\u00e1g"
+            },
+            "ind": {
+              "common": "Kenya",
+              "official": "Republik Kenya"
+            },
+            "ita": {
+              "common": "Kenya",
+              "official": "Repubblica del Kenya"
+            },
+            "jpn": {
+              "common": "\u30b1\u30cb\u30a2",
+              "official": "\u30b1\u30cb\u30a2\u5171\u548c\u56fd"
+            },
+            "kor": {
+              "common": "\ucf00\ub0d0",
+              "official": "\ucf00\ub0d0 \uacf5\ud654\uad6d"
+            },
+            "nld": {
+              "common": "Kenia",
+              "official": "Republiek Kenia"
+            },
+            "pol": {
+              "common": "Kenia",
+              "official": "Republika Kenii"
+            },
+            "por": {
+              "common": "Qu\u00e9nia",
+              "official": "Rep\u00fablica do Qu\u00e9nia"
+            },
+            "rus": {
+              "common": "\u041a\u0435\u043d\u0438\u044f",
+              "official": "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u0435\u043d\u0438\u044f"
+            },
+            "slk": {
+              "common": "Ke\u0148a",
+              "official": "Kensk\u00e1 republika"
+            },
+            "spa": {
+              "common": "Kenia",
+              "official": "Rep\u00fablica de Kenya"
+            },
+            "srp": {
+              "common": "\u041a\u0435\u043d\u0438\u0458\u0430",
+              "official": "\u0420\u0435\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u0435\u043d\u0438\u0458\u0430"
+            },
+            "swe": {
+              "common": "Kenya",
+              "official": "Republiken Kenya"
+            },
+            "tur": {
+              "common": "Kenya",
+              "official": "Kenya Cumhuriyeti"
+            },
+            "urd": {
+              "common": "\u06a9\u06cc\u0646\u06cc\u0627",
+              "official": "\u062c\u0645\u06c1\u0648\u0631\u06cc\u06c1 \u06a9\u06cc\u0646\u06cc\u0627"
+            },
+            "zho": {
+              "common": "\u80af\u5c3c\u4e9a",
+              "official": "\u80af\u5c3c\u4e9a\u5171\u548c\u56fd"
+            }
+          }
+        },
+        "codes": {
+          "alpha_2": "KE",
+          "alpha_3": "KEN",
+          "ccn3": "404",
+          "cioc": "KEN",
+          "fifa": "KEN",
+          "fips": "KE",
+          "gec": "KE"
+        },
+        "capitals": [
+          {
+            "attributes": {
+              "administrative": false,
+              "constitutional": false,
+              "executive": false,
+              "judicial": false,
+              "legislative": false,
+              "primary": true
+            },
+            "coordinates": {
+              "lat": -1.28,
+              "lng": 36.82
+            },
+            "name": "Nairobi"
+          }
+        ],
+        "flag": {
+          "colors": {
+            "dominant": "#f3ede5",
+            "palette": [
+              {
+                "hex": "#f3ede5",
+                "proportion": 0.11009593421653723
+              },
+              {
+                "hex": "#b80000",
+                "proportion": 0.2985381452718136
+              },
+              {
+                "hex": "#096900",
+                "proportion": 0.28803106441297394
+              },
+              {
+                "hex": "#000000",
+                "proportion": 0.2976244860666971
+              },
+              {
+                "hex": "#6a645c",
+                "proportion": 0.002512562814070352
+              },
+              {
+                "hex": "#3c3d41",
+                "proportion": 0.00045682960255824577
+              },
+              {
+                "hex": "#270001",
+                "proportion": 0.0006852444038373687
+              },
+              {
+                "hex": "#520001",
+                "proportion": 0.002055733211512106
+              }
+            ],
+            "prominent": "#b80000",
+            "swatches": {
+              "dark_muted": "#3c3d41",
+              "dark_vibrant": "#520001",
+              "light_muted": "#f3ede5",
+              "light_vibrant": null,
+              "muted": "#6a645c",
+              "vibrant": "#b80000"
+            }
+          },
+          "description": "The flag of Kenya is composed of three equal horizontal bands of black, red with white top and bottom edges, and green. An emblem comprising a red, black and white Maasai shield covering two crossed white spears is superimposed at the center of the field.",
+          "emoji": "\ud83c\uddf0\ud83c\uddea",
+          "html_entity": "&#127472;&#127466;",
+          "unicode": "U+1F1F0 U+1F1EA",
+          "url_png": "https://flags.restcountries.com/v5/w640/ke.png",
+          "url_svg": "https://flags.restcountries.com/v5/svg/ke.svg"
+        },
+        "region": "Africa",
+        "subregion": "Eastern Africa",
+        "area": {
+          "kilometers": 580367,
+          "miles": 224080.9
+        },
+        "assets": [],
+        "borders": [
+          "ETH",
+          "SOM",
+          "SSD",
+          "TZA",
+          "UGA"
+        ],
+        "calling_codes": [
+          "254"
+        ],
+        "cars": {
+          "driving_side": "left",
+          "signs": [
+            "EAK"
+          ]
+        },
+        "classification": {
+          "dependency": false,
+          "dependency_type": "",
+          "disputed": false,
+          "iso_status": "official",
+          "sovereign": true,
+          "un_member": true,
+          "un_observer": false
+        },
+        "continents": [
+          "Africa"
+        ],
+        "coordinates": {
+          "lat": 1,
+          "lng": 38
+        },
+        "currencies": [
+          {
+            "code": "KES",
+            "name": "Kenyan shilling",
+            "symbol": "Sh"
+          }
+        ],
+        "date": {
+          "academic_year_start": {
+            "day": 1,
+            "month": 1
+          },
+          "fiscal_year_start": {
+            "corporate": {
+              "basis": "default",
+              "day": 1,
+              "month": 7
+            },
+            "government": {
+              "day": 1,
+              "month": 7
+            },
+            "personal": {
+              "day": 1,
+              "month": 1
+            }
+          },
+          "start_of_week": "monday"
+        },
+        "demonyms": {
+          "eng": {
+            "f": "Kenyan",
+            "m": "Kenyan"
+          },
+          "fra": {
+            "f": "K\u00e9nyane",
+            "m": "K\u00e9nyan"
+          }
+        },
+        "descriptions": {
+          "long": "Kenya is a republic with Nairobi as its capital and Swahili and English as official languages. The shilling is the currency, and tea, cut flowers, horticulture, tourism and a large mobile money sector lead its economy and export earnings.",
+          "short": "Kenya is an East African republic on the Indian Ocean, crossed by the equator and Rift Valley."
+        },
+        "economy": {
+          "gini_coefficient": {
+            "2005": 46.4,
+            "2015": 40.8,
+            "2020": 36.2,
+            "2021": 38.7,
+            "2022": 38.5
+          }
+        },
+        "government_type": "Unitary presidential republic",
+        "landlocked": false,
+        "languages": [
+          {
+            "bcp47": "en",
+            "iso639_1": "en",
+            "iso639_2b": "eng",
+            "iso639_2t": "eng",
+            "iso639_3": "eng",
+            "name": "English",
+            "native_name": "English"
+          },
+          {
+            "bcp47": "sw",
+            "iso639_1": "sw",
+            "iso639_2b": "swa",
+            "iso639_2t": "swa",
+            "iso639_3": "swa",
+            "name": "Swahili",
+            "native_name": "Kiswahili"
+          }
+        ],
+        "leaders": [
+          {
+            "message": "data.leaders is only available on paid plans. Go to https://restcountries.com/plans to make updates to your account.",
+            "sample": "https://files-03.restcountries.com/countries.00/sample.leaders.json"
+          }
+        ],
+        "links": {
+          "google_maps": "https://goo.gl/maps/Ni9M7wcCxf8bJHLX8",
+          "official": "https://www.president.go.ke",
+          "open_street_maps": "https://www.openstreetmap.org/relation/192798",
+          "wikipedia": "https://en.wikipedia.org/wiki/Kenya"
+        },
+        "memberships": {
+          "african_union": true,
+          "arab_league": false,
+          "asean": false,
+          "brics": false,
+          "commonwealth": true,
+          "eu": false,
+          "eurozone": false,
+          "g20": false,
+          "g7": false,
+          "nato": false,
+          "oecd": false,
+          "opec": false,
+          "schengen": false,
+          "un": true
+        },
+        "number_format": {
+          "decimal_separator": ".",
+          "thousands_separator": ","
+        },
+        "parent": {
+          "alpha_2": "",
+          "alpha_3": ""
+        },
+        "population": 54227015,
+        "postal_code": {
+          "format": "#####",
+          "regex": "^(\\d{5})$"
+        },
+        "timezones": [
+          "UTC+03:00"
+        ],
+        "tlds": [
+          ".ke"
+        ],
+        "units": {
+          "measurement_system": "metric",
+          "temperature_scale": "Celsius"
+        },
+        "uuid": "c84e27f5-05fb-4ea8-b9b3-118902bedc44",
+        "_match": [
+          {
+            "path": "names.common",
+            "value": "Kenya"
+          }
+        ],
+        "_meta": {
+          "lastUpdatedTimestamp": 1791328710
+        }
+      }
+    ],
+    "meta": {
+      "total": 1,
+      "count": 1,
+      "limit": 25,
+      "offset": 0,
+      "more": false,
+      "request_id": "6b9dbe9a-a7db-4388-9d16-3351c89477aa",
+      "duration": 62
+    }
+  }
+}
