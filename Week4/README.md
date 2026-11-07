@@ -19,8 +19,10 @@ python wk4-day2.1-building-a-REST-API.py
 
 Open `http://127.0.0.1:5000` in a browser. Enter the shed name, collection
 date, and non-negative whole-number egg count, then select **Submit**. The
-records table and overall total refresh automatically. The page uses the
-`POST /api/eggs` and `GET /api/eggs` endpoints described below.
+records table, per-shed summary, and total refresh automatically. Use
+**Search by collection date** to show the records and shed totals for one date,
+or **Show all dates** to clear the filter. The page uses the `POST /api/eggs`
+and `GET /api/eggs` endpoints described below.
 
 ## API
 
