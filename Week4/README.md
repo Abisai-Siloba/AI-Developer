@@ -1,9 +1,10 @@
-# Daily Egg Production API
+# Daily Egg Production Tracker
 
-A small Flask REST API for recording daily egg counts by poultry shed. The
-current version stores records in an in-memory list, so all records are lost
-when the server stops or restarts. Do not use this version as the only copy of
-production records.
+A small Flask app for recording daily egg counts by poultry shed. Open its
+browser page to submit a collection and see all records and running totals
+update without reloading. The app stores records in memory, so all records are
+lost when the server stops or restarts. Do not use this version as the only
+copy of production records.
 
 ## Requirements and setup
 
@@ -16,7 +17,10 @@ python -m pip install -r requirements.txt
 python wk4-day2.1-building-a-REST-API.py
 ```
 
-The server listens on `http://127.0.0.1:5000`.
+Open `http://127.0.0.1:5000` in a browser. Enter the shed name, collection
+date, and non-negative whole-number egg count, then select **Submit**. The
+records table and overall total refresh automatically. The page uses the
+`POST /api/eggs` and `GET /api/eggs` endpoints described below.
 
 ## API
 
@@ -65,15 +69,26 @@ The four sample records should produce `total_eggs: 440` and cumulative
 `running_total` values of 120, 215, 340, and 440. These sample dates are
 illustrative; use the actual collection dates for farm records.
 
+## Potential small-business customers in Kenya
+
+The tracker may suit small poultry farms and layer-egg producers that record
+collections by shed, egg aggregators or collection centres that combine daily
+deliveries, and small egg retailers or groceries that want a simple daily
+intake record. The current version is most useful as a low-cost prototype or
+for trying the workflow; in-memory records are not suitable as a permanent
+business record.
+
 ## Indicative service pricing
 
-- **Build and first deployment: KSh 20,000 once.** This covers this small API,
-  basic request validation, and deployment setup.
-- **Keep it running: KSh 2,500 per month.** This covers basic uptime checks and
-  routine maintenance for a low-traffic deployment. Any paid hosting, domain,
-  or usage charges are billed separately.
+- **Small farm or retailer: KSh 20,000 once** for setup and first deployment,
+  then **KSh 2,500 per month** for basic uptime checks and routine maintenance.
+- **Aggregator or collection centre: from KSh 20,000 once** for a trial of the
+  same basic tracker; multi-user access, persistent storage, backups, and
+  reporting should be scoped and priced separately before production use.
 
-These are indicative prices, not a binding quote. This in-memory version loses
-its data on restart and has no authentication or backups. Before relying on it
-for farm records, quote a follow-up upgrade for persistent database storage,
-backups, and access control.
+These are indicative starting prices, not a binding quote. Any paid hosting,
+domain, or usage charges are billed separately.
+
+This in-memory version loses its data on restart and has no authentication or
+backups. Before relying on it for farm records, quote a follow-up upgrade for
+persistent database storage, backups, and access control.
