@@ -1,11 +1,16 @@
 from datetime import date
 from typing import Any
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__)
 
 egg_records: list[dict[str, Any]] = []
+
+
+@app.route("/")
+def egg_tracker():
+    return render_template("egg_tracker.html")
 
 
 @app.route("/api/eggs", methods=["POST"])

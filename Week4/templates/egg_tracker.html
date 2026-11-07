@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Egg Production</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, sans-serif;
+      color: #20352b;
+      background: #f3f6f1;
+    }
+
+    body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    .panel {
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #d9e3da;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 16px #20352b0d;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      align-items: end;
+    }
+
+    label {
+      display: grid;
+      gap: 0.4rem;
+      font-weight: 600;
+    }
+
+    input, button {
+      min-height: 2.75rem;
+      padding: 0 0.75rem;
+      border: 1px solid #aebdb1;
+      border-radius: 6px;
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      color: #fff;
+      background: #24633f;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.65;
+      cursor: wait;
+    }
+
+    #status {
+      min-height: 1.5em;
+      margin-bottom: 0;
+    }
+
+    #total {
+      margin: 0 0 1rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      border-bottom: 1px solid #e3e9e3;
+    }
+
+    th {
+      background: #f3f6f1;
+    }
+
+    @media (max-width: 520px) {
+      body {
+        padding: 1rem 0.75rem;
+      }
+
+      .panel {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Daily Egg Production</h1>
+    <section class="panel" aria-labelledby="entry-heading">
+      <h2 id="entry-heading">Log a collection</h2>
+      <form id="egg-form">
+        <label for="shed">Shed name
+          <input id="shed" name="shed" type="text" required maxlength="100">
+        </label>
+        <label for="date">Collection date
+          <input id="date" name="date" type="date" required>
+        </label>
+        <label for="count">Egg count
+          <input id="count" name="count" type="number" min="0" step="1" required>
+        </label>
+        <button id="submit-button" type="submit">Submit</button>
+      </form>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel" aria-labelledby="records-heading">
+      <h2 id="records-heading">Production records</h2>
+      <p id="total" aria-live="polite">Total eggs: 0</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Shed</th>
+              <th scope="col">Eggs collected</th>
+              <th scope="col">Running total</th>
+            </tr>
+          </thead>
+          <tbody id="records">
+            <tr><td colspan="4">No records yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById("egg-form");
+    const submitButton = document.getElementById("submit-button");
+    const statusMessage = document.getElementById("status");
+    const recordsBody = document.getElementById("records");
+    const totalDisplay = document.getElementById("total");
+    const dateInput = document.getElementById("date");
+
+    function setDefaultDate() {
+      const localDate = new Date(Date.now() - new Date().getTimezoneOffset() * 60000);
+      dateInput.value = localDate.toISOString().slice(0, 10);
+    }
+
+    async function readResponse(response) {
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || "The server could not complete the request.");
+      }
+      return data;
+    }
+
+    async function loadRecords() {
+      const response = await fetch("/api/eggs");
+      const data = await readResponse(response);
+      renderRecords(data);
+      return data;
+    }
+
+    function renderRecords(data) {
+      recordsBody.replaceChildren();
+      totalDisplay.textContent = `Total eggs: ${data.total_eggs}`;
+
+      if (data.records.length === 0) {
+        const row = recordsBody.insertRow();
+        const cell = row.insertCell();
+        cell.colSpan = 4;
+        cell.textContent = "No records yet.";
+        return;
+      }
+
+      for (const record of data.records) {
+        const row = recordsBody.insertRow();
+        for (const value of [
+          record.date,
+          record.shed,
+          record.count,
+          record.running_total
+        ]) {
+          row.insertCell().textContent = value;
+        }
+      }
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      submitButton.disabled = true;
+      statusMessage.textContent = "Saving record...";
+
+      try {
+        const payload = {
+          shed: form.elements.shed.value.trim(),
+          date: form.elements.date.value,
+          count: Number(form.elements.count.value)
+        };
+        const response = await fetch("/api/eggs", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        await readResponse(response);
+        form.reset();
+        setDefaultDate();
+
+        try {
+          const data = await loadRecords();
+          statusMessage.textContent = `Record saved. Total eggs: ${data.total_eggs}.`;
+        } catch (error) {
+          statusMessage.textContent = `Record saved, but the table could not be refreshed: ${error.message}`;
+        }
+      } catch (error) {
+        statusMessage.textContent = `Could not save record: ${error.message}`;
+      } finally {
+        submitButton.disabled = false;
+      }
+    });
+
+    setDefaultDate();
+    loadRecords().catch((error) => {
+      statusMessage.textContent = `Could not load records: ${error.message}`;
+    });
+  </script>
+</body>
+</html>
