@@ -76,6 +76,28 @@
       font-weight: 700;
     }
 
+    .filter-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: end;
+      margin-bottom: 1.25rem;
+    }
+
+    .filter-controls label {
+      min-width: min(100%, 220px);
+    }
+
+    .filter-controls button {
+      padding: 0 1rem;
+      color: #20352b;
+      background: #e6eee7;
+    }
+
+    .summary-table {
+      margin-bottom: 1.5rem;
+    }
+
     .table-wrap {
       overflow-x: auto;
     }
@@ -129,6 +151,26 @@
     <section class="panel" aria-labelledby="records-heading">
       <h2 id="records-heading">Production records</h2>
       <p id="total" aria-live="polite">Total eggs: 0</p>
+      <div class="filter-controls">
+        <label for="filter-date">Search by collection date
+          <input id="filter-date" type="date">
+        </label>
+        <button id="clear-filter" type="button">Show all dates</button>
+      </div>
+      <h3>Shed summary</h3>
+      <div class="table-wrap summary-table">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Shed</th>
+              <th scope="col">Eggs collected</th>
+            </tr>
+          </thead>
+          <tbody id="shed-summary">
+            <tr><td colspan="2">No records yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
       <div class="table-wrap">
         <table>
           <thead>
@@ -154,6 +196,9 @@
     const recordsBody = document.getElementById("records");
     const totalDisplay = document.getElementById("total");
     const dateInput = document.getElementById("date");
+    const filterDateInput = document.getElementById("filter-date");
+    const shedSummaryBody = document.getElementById("shed-summary");
+    let allRecords = [];
 
     function setDefaultDate() {
       const localDate = new Date(Date.now() - new Date().getTimezoneOffset() * 60000);
@@ -171,34 +216,71 @@
     async function loadRecords() {
       const response = await fetch("/api/eggs");
       const data = await readResponse(response);
-      renderRecords(data);
+      allRecords = data.records;
+      renderRecords();
       return data;
     }
 
-    function renderRecords(data) {
-      recordsBody.replaceChildren();
-      totalDisplay.textContent = `Total eggs: ${data.total_eggs}`;
+    function renderRecords() {
+      const selectedDate = filterDateInput.value;
+      const records = selectedDate
+        ? allRecords.filter((record) => record.date === selectedDate)
+        : allRecords;
+      const shedTotals = new Map();
+      let totalEggs = 0;
+      let runningTotal = 0;
 
-      if (data.records.length === 0) {
+      recordsBody.replaceChildren();
+      shedSummaryBody.replaceChildren();
+
+      for (const record of records) {
+        shedTotals.set(record.shed, (shedTotals.get(record.shed) || 0) + record.count);
+        totalEggs += record.count;
+      }
+
+      totalDisplay.textContent = `Eggs in results: ${totalEggs}`;
+
+      if (records.length === 0) {
         const row = recordsBody.insertRow();
         const cell = row.insertCell();
         cell.colSpan = 4;
-        cell.textContent = "No records yet.";
+        cell.textContent = selectedDate
+          ? "No records found for this date."
+          : "No records yet.";
+        const summaryRow = shedSummaryBody.insertRow();
+        const summaryCell = summaryRow.insertCell();
+        summaryCell.colSpan = 2;
+        summaryCell.textContent = selectedDate
+          ? "No shed totals for this date."
+          : "No records yet.";
         return;
       }
 
-      for (const record of data.records) {
+      for (const [shed, count] of shedTotals) {
+        const row = shedSummaryBody.insertRow();
+        row.insertCell().textContent = shed;
+        row.insertCell().textContent = count;
+      }
+
+      for (const record of records) {
+        runningTotal += record.count;
         const row = recordsBody.insertRow();
         for (const value of [
           record.date,
           record.shed,
           record.count,
-          record.running_total
+          runningTotal
         ]) {
           row.insertCell().textContent = value;
         }
       }
     }
+
+    filterDateInput.addEventListener("input", renderRecords);
+    document.getElementById("clear-filter").addEventListener("click", () => {
+      filterDateInput.value = "";
+      renderRecords();
+    });
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
