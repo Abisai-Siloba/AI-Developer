@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eldoret Hardware Shop | Customer Balances</title>
+    <style>
+      body {
+        max-width: 38rem;
+        margin: 4rem auto;
+        padding: 0 1.25rem;
+        color: #202b25;
+        font: 1rem/1.5 system-ui, sans-serif;
+      }
+      form { display: flex; gap: 0.6rem; }
+      input, button { padding: 0.7rem; font: inherit; }
+      input { flex: 1; min-width: 0; }
+      button { cursor: pointer; }
+      #result { margin-top: 1.25rem; font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Eldoret Hardware Shop</h1>
+      <p>Check a customer's outstanding credit balance.</p>
+      <form id="balance-form">
+        <label for="customer">Customer name</label>
+        <input id="customer" name="customer" autocomplete="name" required>
+        <button type="submit">Search</button>
+      </form>
+      <p id="result" aria-live="polite"></p>
+    </main>
+    <script>
+      const form = document.querySelector("#balance-form");
+      const result = document.querySelector("#result");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        result.textContent = "Searching...";
+        const customer = form.elements.customer.value.trim();
+
+        try {
+          const response = await fetch(
+            `/api/balance?customer=${encodeURIComponent(customer)}`
+          );
+          const data = await response.json();
+          result.textContent = response.ok
+            ? `${data.customer} owes KES ${data.balance.toLocaleString()}.`
+            : data.error;
+        } catch {
+          result.textContent = "Could not retrieve the balance. Please try again.";
+        }
+      });
+    </script>
+  </body>
+</html>
