@@ -1,3 +1,5 @@
+# Daily Egg Tracker API
+
 from datetime import date
 from typing import Any
 
