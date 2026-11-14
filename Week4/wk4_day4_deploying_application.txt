@@ -1,0 +1,30 @@
+Deploying Your Application
+A tool that only runs on your laptop is a demo. 
+A tool at a URL is a product. Today you deploy your Flask application to Render so anyone with the link can use it.
+
+1. Create a free account on Render (render.com). No credit card needed. It is the simplest place to deploy a Flask app.
+Runtime	Python 3
+Build Command	pip install -r requirements.txt
+Start Command	gunicorn app:app
+Instance Type	Free
+
+2. In VSCODE, create a file called `requirements.txt` with the correct start command. Render needs to know what to install and how to start your app. fill the requirements.txt file with the following and push it to your GitHub repo:
+# requirements.txt
+flask==3.0.0
+flask-cors==4.0.0
+openai==1.12.0
+python-dotenv==1.0.0
+gunicorn==21.2.0
+
+3. Go to render.com, New, Web Service, connect your GitHub repo.
+Set Build and Start Commands as shown above, then click Deploy
+Wait 2-3 minutes. Your URL appears at the top of the dashboard when the deploy is complete.
+
+4. Add your API key as an environment variable on Render. Never put it in code.
+# Never put your API key in code or commit it to GitHub. Render's environment section is the only safe place for secrets in a deployed app.
+
+5. Test your deployed app by visiting the URL provided by Render. You should see your Flask application running live on the web.
+
+6. If you make changes to your app, commit and push them to GitHub. Render will automatically redeploy your app with the new changes.
+
+7. Error Handling: If your app doesn't deploy correctly, check the Render logs for errors. Common issues include missing dependencies in requirements.txt or incorrect start commands.

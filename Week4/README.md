@@ -3,8 +3,7 @@
 A small Flask app for recording daily egg counts by poultry shed. Open its
 browser page to submit a collection and see all records and running totals
 update without reloading. The app stores records in memory, so all records are
-lost when the server stops or restarts. Do not use this version as the only
-copy of production records.
+lost when the server stops or restarts.
 
 ## Requirements and setup
 
@@ -17,7 +16,7 @@ python -m pip install -r requirements.txt
 python wk4-day2.1-building-a-REST-API.py
 ```
 
-Open `http://127.0.0.1:5000` in a browser. Enter the shed name, collection
+Open URL `https://daily-egg-production-tracker.onrender.com` in a browser. Enter the shed name, collection
 date, and non-negative whole-number egg count, then select **Submit**. The
 records table, per-shed summary, and total refresh automatically. Use
 **Search by collection date** to show the records and shed totals for one date,
