@@ -1,5 +1,5 @@
 '''
-Project: Deployed AI Web Application
+Project: Deployed AI Web Application:
 Build an AI web app where the user submits text and gets an AI result.
 Deploy to Render using the week4 day4 process.
 
@@ -54,7 +54,7 @@ def process():
 
     try:
         response = client.messages.create(
-            model="claude-3-haiku-20240307",
+            model="claude-haiku-4-5",
             max_tokens=1024,
             messages=[{"role": "user", "content": text}],
         )
