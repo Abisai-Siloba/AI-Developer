@@ -1,3 +1,5 @@
+// Daily Egg Tracker API
+
 async function summarize() {
     const btn = document.getElementById("submit-btn");
     const output = document.getElementById("output");
