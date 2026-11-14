@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Text Processor</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #f7f7f7;
+        color: #222;
+      }
+      .card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      }
+      textarea {
+        width: 100%;
+        min-height: 160px;
+        margin: 12px 0;
+        padding: 12px;
+        font-size: 16px;
+        resize: vertical;
+        box-sizing: border-box;
+      }
+      button {
+        background: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 22px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.7;
+        cursor: wait;
+      }
+      #result {
+        margin-top: 20px;
+        white-space: pre-wrap;
+        background: #f3f4f6;
+        padding: 16px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>AI Text Processor</h1>
+      <p>Paste text below and let the AI turn it into a response.</p>
+      <textarea id="textInput" placeholder="Type or paste your text here..."></textarea>
+      <button id="submitBtn" type="button">Process</button>
+      <div id="result">Your result will appear here.</div>
+    </div>
+
+    <script>
+      const textInput = document.getElementById('textInput');
+      const submitBtn = document.getElementById('submitBtn');
+      const resultBox = document.getElementById('result');
+
+      submitBtn.addEventListener('click', async () => {
+        const text = textInput.value.trim();
+        if (!text) {
+          resultBox.textContent = 'Please enter some text before submitting.';
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Processing...';
+        resultBox.textContent = 'Working...';
+
+        try {
+          const response = await fetch('/api/process', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ text })
+          });
+
+          const data = await response.json();
+          if (!response.ok) {
+            throw new Error(data.error || 'Request failed');
+          }
+
+          resultBox.textContent = data.result;
+        } catch (error) {
+          resultBox.textContent = error.message || 'Something went wrong. Please try again.';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Process';
+        }
+      });
+    </script>
+  </body>
+</html>
