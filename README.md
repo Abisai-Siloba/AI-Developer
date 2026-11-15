@@ -18,5 +18,3 @@ The data is pulled directly from the database with a simple seach of a customer 
 Have the system tested for 3 days and share the feedback. I will prepare the final invoce for the remaining 50% 
 
 
-
-

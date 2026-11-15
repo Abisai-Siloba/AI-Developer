@@ -3,10 +3,13 @@ A tool that only runs on your laptop is a demo.
 A tool at a URL is a product. Today you deploy your Flask application to Render so anyone with the link can use it.
 
 1. Create a free account on Render (render.com). No credit card needed. It is the simplest place to deploy a Flask app.
-Runtime	Python 3
+Name            Enter project Name
+Languege        python 3
+Root Dictionary if the file is in a folder, write a folder Name. if not leave blank.
 Build Command	pip install -r requirements.txt
-Start Command	gunicorn app:app
+Start Command	gunicorn file_name_app:app
 Instance Type	Free
+key             add from .env
 
 2. In VSCODE, create a file called `requirements.txt` with the correct start command. Render needs to know what to install and how to start your app. fill the requirements.txt file with the following and push it to your GitHub repo:
 # requirements.txt
