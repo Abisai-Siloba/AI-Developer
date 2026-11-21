@@ -1,0 +1,2 @@
+2026-11-19 23:02:49 | status=error | rows_processed=0
+2026-11-19 23:17:04 | status=error | rows_processed=0
